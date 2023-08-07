@@ -1,9 +1,9 @@
-# Fabric Example Mod
+# ScalaFabric Example Mod
 
-## Setup
+this does NOT work at the moment this is just a proof of concept me and my friends were thinking about.
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+feel free making a PR or make an issue about this project.
 
-## License
+## Plug
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+shoutout to FabricMc for making the original Fabric example mod get it here https://github.com/FabricMC/fabric-example-mod
