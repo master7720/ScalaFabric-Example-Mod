@@ -1,16 +1,19 @@
-package com.example.mixin;
+package com.example
 
-import net.minecraft.server.MinecraftServer;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import net.fabricmc.api.ModInitializer
+import org.slf4j.{Logger, LoggerFactory}
 
-@Mixin(MinecraftServer.class)
-public class ExampleMixin {
-  @Inject(at = @At("HEAD"), method = "loadWorld"
-  )
-  private void init (CallbackInfo info) {
-    // This code is injected into the start of MinecraftServer.loadWorld()V
+object TemplateMod extends ModInitializer {
+  // This logger is used to write text to the console and the log file.
+  // It is considered best practice to use your mod id as the logger's name.
+  // That way, it's clear which mod wrote info, warnings, and errors.
+  val LOGGER: Logger = LoggerFactory.getLogger("template-mod")
+
+  override def onInitialize(): Unit = {
+          // This code runs as soon as Minecraft is in a mod-load-ready state.
+          // However, some things (like resources) may still be uninitialized.
+          // Proceed with mild caution.
+
+          LOGGER.info("Hello Fabric world!")
   }
 }
